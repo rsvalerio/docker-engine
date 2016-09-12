@@ -1,0 +1,8 @@
+[ubuntu]
+trusty ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_private_key_file=.vagrant/machines/trusty/virtualbox/private_key
+wily ansible_ssh_host=127.0.0.1 ansible_ssh_port=2200 ansible_ssh_private_key_file=.vagrant/machines/wily/virtualbox/private_key
+xenial ansible_ssh_host=127.0.0.1 ansible_ssh_port=2201 ansible_ssh_private_key_file=.vagrant/machines/xenial/virtualbox/private_key
+
+[centos]
+centos6 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2202 ansible_ssh_private_key_file=.vagrant/machines/centos6/virtualbox/private_key
+centos7 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2203 ansible_ssh_private_key_file=.vagrant/machines/centos7/virtualbox/private_key

@@ -1,0 +1,21 @@
+---
+- name: Dealing with SELinux
+  yum:
+    name: libselinux-python
+    state: latest
+
+- name: Create yum docker repo
+  template:
+    src: docker.repo
+    dest: /etc/yum.repos.d
+
+- name: Install docker
+  yum:
+    name: '{{ docker_pkg_name }}'
+    state: latest
+
+- name: Enable and start service
+  service:
+    name: docker
+    state: started
+    enabled: yes

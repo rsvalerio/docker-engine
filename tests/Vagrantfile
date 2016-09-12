@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.define "trusty", autostart: true do |trusty|
+    trusty.vm.box = "ubuntu/trusty64"   #14.04
+  end
+
+  config.vm.define "wily", autostart: true do |wily|
+    wily.vm.box = "ubuntu/wily64"       #15.10
+  end
+
+  config.vm.define "xenial", autostart: true do |xenial|
+    xenial.vm.box = "geerlingguy/ubuntu1604"   #16.04
+#    xenial.vm.box = "ubuntu/xenial64"   #16.04 #comes with python 3, still not supported by ansible
+  end
+
+  config.vm.define "centos6", autostart: true do |centos6|
+    centos6.vm.box = "centos/6"
+  end
+
+  config.vm.define "centos7", autostart: true do |centos7|
+    centos7.vm.box = "centos/7"
+  end
+
+end

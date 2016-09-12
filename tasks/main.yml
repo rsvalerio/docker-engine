@@ -1,0 +1,8 @@
+---
+- include_vars: '{{ ansible_os_family }}.yml'
+
+- debug: var=ansible_os_family
+- debug: var=ansible_distribution_release
+
+- name: Include installation for {{ ansible_os_family }} family
+  include: '{{ ansible_os_family }}.yml'

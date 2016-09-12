@@ -1,0 +1,38 @@
+---
+
+- name: Update local repository
+  apt: update_cache=yes cache_valid_time='{{ apt_cache_valid_time }}'
+
+- name: Install packages
+  apt:
+    name: '{{ item }}'
+    state: present
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+
+- name: Add Docker repository key
+  apt_key:
+    id: '{{ apt_key_sig }}'
+    keyserver: '{{ apt_key_url }}'
+    state: present
+
+- name: Add Docker repository and update apt cache
+  apt_repository:
+    repo: '{{ apt_repository }}'
+    mode: '644'
+    update_cache: yes
+    state: present
+
+- name: Install docker package
+  apt:
+    name: '{{ docker_pkg_name }}'
+    state: present
+    update_cache: yes
+    cache_valid_time: '{{ apt_cache_valid_time }}'
+
+- name: Enable and start service
+  service:
+    name: docker
+    state: started
+    enabled: yes

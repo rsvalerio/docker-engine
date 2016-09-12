@@ -1,0 +1,29 @@
+Host trusty
+     HostName 127.0.0.1
+     User vagrant
+     Port 2222
+     IdentityFile ./.vagrant/machines/trusty/virtualbox/private_key
+
+Host wily
+     HostName 127.0.0.1
+     User vagrant
+     Port 2200
+     IdentityFile .vagrant/machines/wily/virtualbox/private_key
+
+Host xenial
+     HostName 127.0.0.1
+     User vagrant
+     Port 2201
+     IdentityFile .vagrant/machines/xenial/virtualbox/private_key
+
+Host centos6
+     HostName 127.0.0.1
+     User vagrant
+     Port 2202
+     IdentityFile .vagrant/machines/centos6/virtualbox/private_key
+
+Host centos7
+     HostName 127.0.0.1
+     User vagrant
+     Port 2203
+     IdentityFile .vagrant/machines/centos7/virtualbox/private_key

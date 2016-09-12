@@ -1,0 +1,10 @@
+---
+docker_pkg_name: 'docker-engine'
+
+apt_cache_valid_time: 0
+
+apt_key_url: ''
+
+apt_key_sig: ''
+
+apt_repository: deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main

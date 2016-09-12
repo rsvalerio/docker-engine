@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - { role: ../../docker-engine }
+
+
+#- hosts: all
+#  connection: local
+#  gather_facts: false
+#
+#  tasks:
+#    - name: Testing
+#      shell: testinfra --connection=ssh --ssh-config=./ssh_config --hosts=localhost
+#      register: result
+#
+#    - debug: var=result
